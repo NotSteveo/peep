@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pixelify+Sans&family=Sometype+Mono&display=swap');
+
+body { 
+  background:#222222; 
+  color:white; 
+  font-family: 'Inter', sans-serif; 
+}
+.wrap { 
+  max-width: 760px; 
+  margin: 40px auto; 
+  padding: 0 16px; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 24px; 
+}
+.logo { 
+  text-align:center; 
+  color:#86efac; 
+  font-family: 'Pixelify Sans', monospace; 
+  letter-spacing:6px; 
+  font-size:48px; 
+  margin-bottom:0; 
+}
+
+/* Panel Container Styles */
+.card { 
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 12px 8px; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 12px; 
+}
+#today h2 {
+  margin-left: .5rem;
+}
+.card-header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding-left:7px;
+}
+#rulesTable {
+  background: #22242F;
+  border-radius: 4px;
+  border: 1px solid #595959;
+  border-collapse: separate !important;
+}
+h2 { 
+  margin:0; 
+  font-size: 18px; 
+}
+
+/* Add Button (+) Style */
+#addRuleBtn {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+#addRuleBtn:hover { 
+  background-color: #6366f1; 
+}
+
+/* Table Styles */
+table { 
+  width:100%; 
+  border-collapse:collapse; 
+}
+thead th { 
+  text-align:left; 
+  color:#94a3b8; 
+  font-weight:600; 
+  font-size: 14px;
+  padding:10px 8px; 
+  border-bottom: 1px solid #333;
+}
+tbody td { 
+  padding: 14px 8px; 
+  font-size: 14px; /* Added this line */
+}
+tbody tr:not(.editing):hover { 
+  background:#252525; 
+  cursor: pointer; 
+}
+tbody tr.locked:hover {
+  cursor: not-allowed;
+  background: #1A1A1A;
+  opacity: 0.7;
+}
+tbody tr:not(:last-child) { 
+  border-bottom:1px solid #2a2a2a; 
+}
+
+/* Input Box Styles */
+tr.editing input {
+  background: rgba(34, 37, 59, 0.5); /* #22253B at 50% alpha */
+  border: 1px solid #303030;
+  border-radius: 12px;
+  color: #787878;
+  font-size: 12px;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+tr.editing input:hover {
+  background: #22253B;
+}
+tr.editing input:focus {
+  background: rgba(34, 37, 59, 0.5);
+  border: 1px solid #595959;
+  color: white;
+  outline: none;
+}
+
+/* Action Icons */
+.actions, .actions-header { 
+  text-align: right; 
+}
+.actions { 
+  display: flex; 
+  gap: 8px; 
+  justify-content: flex-end; 
+  align-items: center;
+}
+.actions .btn {
+  background: transparent;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+  width: 36px;
+  height: 36px;
+}
+
+.actions .btn:hover {
+    opacity: 0.8;
+}
+
+.actions .btn.save {
+    background: #263D36;
+    border: 1px solid #4EECBF;
+}
+
+.actions .btn.save svg path {
+    stroke-width: 2; /* Make the checkmark thicker */
+}
+
+.actions .btn.cancel {
+    background: #3B2322;
+    border: 1px solid #693230;
+}
+
+.actions .btn.danger {
+    background: #6C708A;
+    border: none;
+}
+
+/* General & Tab Group Buttons */
+.btn {
+  background: #363636;
+  border: 1px solid #595959;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+.btn:hover {
+  border: 1px solid #363636;
+}
+
+.tab-btn {
+  background: #363636;
+  border: 1px solid #363636;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+.tab-btn:hover {
+  background: #363636;
+  border: 1px solid #363636;
+}
+.tab-btn.selected {
+  background: #22253B;
+  border: 1px solid #4E63EC;
+}
+
+/* Misc */
+.help { 
+  color:#94a3b8; 
+  font-size:12px; 
+  text-align:center; 
+  margin-top: 8px; 
+}
+#todayBody { 
+  display:grid; 
+  gap:8px; 
+  grid-template-columns: 1fr; 
+}
+.tag { 
+  background:#303030; 
+  border-radius:6px; 
+  padding:10px 12px; 
+  display:flex; 
+  justify-content:space-between; 
+  align-items: center; 
+  font-size: 14px; 
+}
+.tag b { 
+  color:#e5e7eb; 
+}
+.peep-num, input[type="number"], tr.editing input.peep-num {
+  font-family: 'Sometype Mono', monospace;
+}

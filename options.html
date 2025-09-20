@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>PEEP Options</title>
+    <link rel="stylesheet" href="options.css"/>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1 class="logo">PEEP</h1>
+      <section class="card">
+        <div class="card-header">
+          <h2>Block list</h2>
+          <button id="addRuleBtn" title="Add new rule">+</button>
+        </div>
+        <table id="rulesTable">
+          <thead>
+            <tr>
+              <th>Site</th>
+              <th>Delay</th>
+              <th>Visits</th>
+              <th>Limit</th>
+              <th class="actions-header">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="rulesBody"></tbody>
+        </table>
+        <p class="help">Use *.domain.com to include all subdomains. Paths are allowed and will be matched as a prefix.<br>You can only change your settings once a day.</p>
+      </section>
+
+      <section class="card" id="today">
+        <h2>Today</h2>
+        <div id="todayBody"></div>
+      </section>
+    </main>
+
+    <script src="utils.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
